@@ -21,7 +21,7 @@ mongoose.set('useNewUrlParser', true);
 // crear servidor
 const app = express();
 
-const whitelist = [process.env.FRONTEND_URL];
+const whitelist = [process.env.FRONTEND_URL, process.env.DB_URL];
 const corsOptions = {
     origin: (origin, callback) => {
         const existe = whitelist.some(dominio => dominio ===origin);
